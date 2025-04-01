@@ -1,0 +1,219 @@
+:root {
+  --col-width-scale: 100/50; /* = 100/sum  */
+  --c-team-width: 5%;
+  --c-pitcher-width: 12%;
+  --c-line-width: 2.4%; /* x2 */
+  --c-ou-width: 3%; /* x4 */
+  --c-cat-width: 8.4%;
+  --catGap: 2em; /* x4 */
+
+}
+
+/* SHADING FOR DEBUGGING */
+/* .column{
+  outline: rgb(128, 126, 0) dashed 1px;
+}
+.column p{
+  background-color: rgba(183, 186, 102, 0.232);
+} */
+
+
+
+.fullTableRow{
+  text-align: left;
+  /* outline: rgb(255, 9, 9) .5px dashed; */
+  width: 100%;
+  
+  margin: var(--odds-borderWH) auto;
+  color: var(--c-odds-text);
+  white-space: nowrap;
+  min-width: 42rem;
+}
+.tableRow-content{
+  background-color: var(--c-odds-bg);
+}
+.column{
+  /* outline: yellow 1px solid ; */
+  display: inline-block;
+  height: 100%;
+  padding: var(--row-pad) 0;
+  white-space:nowrap;
+  vertical-align: top;
+}
+.column p{
+  margin: 0;
+  line-height: calc(var(--tableRowHt)/1.8);
+  /* line-height: 100%; */
+
+  text-align: center;
+  font-size: var(--fsz-table);
+  font-family: Monofont;
+}
+/* .column .doubleRow{
+  line-height: var(--tableRowHt);
+  white-space: nowrap;
+} */
+.c-team p{
+  font-family: Displayfont;
+  font-size: var(--fsz-table-team);
+  height: 50%;
+  line-height: calc(var(--tableRowHt)/2 + var(--row-pad));
+  vertical-align: middle;
+}
+
+
+/*******************/
+/* COLUMN WIDTHS */
+/*******************/
+
+.c-team{
+  width: calc(var(--c-team-width)*var(--col-width-scale));
+  /* min-width: 3.6rem; */
+  outline: 3px solid var(--c-app-bg);
+}
+.c-pitcher{
+  width: calc(var(--c-pitcher-width)*var(--col-width-scale));
+  /* min-width: 3rem; */
+}
+.c-line{
+  width: calc(var(--c-line-width)*var(--col-width-scale));
+  margin-left: var(--catGap);
+  /* min-width: 3rem; */
+}
+.c-ou{
+  width: calc(var(--c-ou-width)*var(--col-width-scale));
+  /* min-width: 3.2rem; */
+}
+.c-kcat, .c-ocat{
+  width: calc(var(--c-cat-width)*var(--col-width-scale));
+  margin-left: var(--catGap);
+}
+/*******************/
+/* COLUMN OUTLINES  ||||||||||||||||||||||||||||||||||||||||*/
+/*******************/
+.c-date-content{
+  /* outline: solid var(--odds-borderWV) var(--c-odds-borderV); */
+}
+.c-team-content{
+  /* outline: solid var(--odds-borderWV) var(--c-odds-borderV); */
+  border-radius: 1em;
+}
+.c-best-content{
+  /* outline: solid var(--odds-borderWV) var(--c-odds-borderV); */
+}
+.c-chart-content{
+  /* outline: solid var (--odds-borderWV) var(--c-odds-borderV); */
+}
+.c-book-content{
+  outline: solid var(--odds-borderWV) var(--c-odds-borderV);
+}
+
+/*******************/
+/*   ROW OUTLINES  ------------------------------------*/ 
+/*******************/
+.tableRow-content{
+  outline: solid var(--odds-borderW) var(--c-odds-borderH);
+  border-radius: var(--corner-radius) 0 0 var(--corner-radius);
+}
+
+
+/*******************/
+/*     ODDS BOX    */
+/*******************/
+
+.column .splitContainer {
+  /* vertical-align: top; */
+  height: calc(var(--tableRowHt)/2);
+  width: 100%;
+  margin: 0;
+  display: block;
+  /* outline: orange .1px solid; */
+  text-align: left;
+
+}
+.column .split {
+  display: inline-block;
+  margin: 0;
+}
+.column .line {
+  vertical-align: top;
+  /* text-align: right; */
+  width: 58%;
+  padding-right: 7%;
+  letter-spacing: var(--mono-tight);
+  font-family: MainfontVariable;
+  font-stretch: 100%;
+  font-weight: 400;
+  /* outline: dashed .3px yellow; */
+  /* background-color: rgba(13, 255, 0, 0.269); */
+
+}
+.column .odd {
+  /* text-align: left; */
+  vertical-align: top;
+  font-size: var(--fsz-table-small);
+  color: var(--c-odds-text-half);
+  font-weight: 300;
+  /* outline: dashed .3px red; */
+  /* background-color: rgba(255, 0, 0, 0.288); */
+}
+
+
+/* WANT INPUT BOXES */
+.c-pitcher-content p {
+  text-align: left;
+  margin-left: 12px;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  font-weight: 400;
+}
+.inputContainer {
+  position: relative;
+  display: block;
+  /* width: calc(var(--c-want-width)*var(--col-width-scale)); */
+  width: 100%;
+  height: 50%;
+  /* max-width:; */
+}
+.inputContainer input {
+  position: absolute;
+  padding: 0;
+  margin: 0 .3rem;
+  /* width: calc(var(--c-ant-width)*var(--col-width-scale)); */
+  width: 88%;
+  height: 93%;
+  border: none;
+  background-color: rgba(128, 223, 255, 0.05);
+  /* background-color: rgba(255, 168, 28, 0.868); */
+  display: block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  text-align: center;
+  font-family: Monofont;
+  font-size: var(--fsz-table);
+  color: rgba(255,255,255,.5);
+  border-radius: .3rem;  
+  -moz-appearance: textfield;
+}
+/* remove arrows */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.ic2 input{
+  bottom: 0;
+}
+
+#available {
+  color: var(--c-data-green);
+  opacity: 1;
+}
+#availablePlus {
+  color: var(--c-app-bg);
+  background-color: var(--c-data-green);
+  opacity: 1;
+}

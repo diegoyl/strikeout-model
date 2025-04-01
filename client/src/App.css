@@ -1,0 +1,141 @@
+:root {
+  --tableRowHt: 2.6rem;
+  --tableRowHtHdr: 1.2rem;
+  --main-width: 100vw;
+  --oddsTableWidth: 80vw;
+
+  --fsz-table: .7rem;
+  --fsz-table-small: .7rem;
+  --fsz-table-team: 1.1rem;
+  --fsz-gui: .7rem;
+
+  --row-pad: .21rem;
+  --corner-radius: 1rem;
+
+  --mono-tight:-.08rem;
+
+  --c-app-bg: rgb(11, 23, 46);
+  --c-app-bg-transparent: rgba(11, 26, 55,0);
+  --c-app-highdim: rgba(0, 75, 225, 0.545);
+  --c-app-highlight: rgb(0, 80, 239);
+  --c-odds-bg: rgba(136, 213, 255, 0.099);
+  --c-odds-borderV: rgb(11, 26, 55);
+  --c-odds-borderH: rgb(11, 26, 55);
+  --odds-borderWH: 4px;
+  --odds-borderWV: 1px;
+  --c-odds-text: rgb(224, 238, 246);
+  --c-odds-text-half: rgb(142, 169, 184);
+
+  --c-data-green-hue: 155;
+  --c-data-green: hsl(155,100%,50%);
+  --c-data-green-l: 35%;
+  --c-data-red-hue: 345;
+  --c-data-red-l: 45%;
+
+}
+@font-face {
+  font-family: Mainfont;
+  src: url(../public/MartianMono-VariableFont_wdth\,wght.ttf);
+  font-stretch: 90%;
+  font-weight: 500;
+}
+@font-face {
+  font-family: MainfontVariable;
+  src: url(../public/MartianMono-VariableFont_wdth\,wght.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: MainfontThin;
+  src: url(../public/MartianMono-VariableFont_wdth\,wght.ttf);
+  font-stretch: 90%;
+  font-weight: 250;
+}
+@font-face {
+  font-family: Displayfont;  
+  src: url(../public/MartianMono-VariableFont_wdth\,wght.ttf);
+  font-weight: bolder;
+  font-stretch: 112%;
+  font-weight: 900;
+}
+@font-face {
+  font-family: Monofont;
+  src: url(../public/MartianMono-VariableFont_wdth\,wght.ttf);
+  font-weight: 300;
+  font-stretch: 85%;
+}
+@font-face {
+  font-family: Monofont-Italic;
+  src: url(../public/FragmentMono-Italic.ttf);
+}
+
+
+.App {
+  text-align: center;
+  font-family: Mainfont;
+  font-weight: bold;
+  background-color: var(--c-app-bg);
+  min-height: 100vh;
+  min-width: 100vw;
+  color: white;
+  /* height: 100vh; */
+  position: absolute;
+
+}
+
+#main-content{
+  width: var(--main-width);
+  margin: 0 auto;
+  text-align: center;
+}
+#fixedContainer {
+  background-color: var(--c-app-bg);
+  /* background: linear-gradient(var(--c-app-bg) 87%, var(--c-app-bg-transparent) 100%); */
+  background: linear-gradient(var(--c-app-bg) 92%, var(--c-app-bg-transparent) 100%);
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--main-width);
+}
+
+#buttonsContainer {
+  /* background-color: rgba(255, 255, 0, 0.457); */
+  position: relative;
+  display: block;
+  width: 96vw;
+  height:var(--oddsTypeContHt);
+  padding: .8em 0;
+  margin: 0 auto 2em;
+}
+
+button {
+    font-family: MainfontVariable;
+    font-stretch: 112%;
+    font-weight: 700;
+    background-color: var(--c-app-bg);
+    color: var(--c-app-highlight);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: var(--c-app-highlight) var(--btnBordWdth) solid;
+    transition: .2s ease-in-out;
+    vertical-align: top;
+}
+button:hover {
+    background-color: var(--c-app-highlight);
+    color: var(--c-app-bg);
+}
+
+.reqDiv {
+  text-align: left;
+  width: max-content;
+  margin: 0 auto;
+  display: inline-block;
+  margin-right: 3em;
+}
+.reqText {
+  margin: .2em 0;
+  font-family: Monofont;
+  color: var(--c-app-highlight);
+  font-size: .7em;
+}
