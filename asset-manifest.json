@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/strikeout-model/static/css/main.5d769d7f.css",
+    "main.js": "/strikeout-model/static/js/main.4d8f14f2.js",
+    "static/media/MartianMono-VariableFont_wdth,wght.ttf": "/strikeout-model/static/media/MartianMono-VariableFont_wdth,wght.9dc9a40944d5007bc4d9.ttf",
+    "static/media/FragmentMono-Italic.ttf": "/strikeout-model/static/media/FragmentMono-Italic.dd408ce5edc9f47abccc.ttf",
+    "index.html": "/strikeout-model/index.html",
+    "main.5d769d7f.css.map": "/strikeout-model/static/css/main.5d769d7f.css.map",
+    "main.4d8f14f2.js.map": "/strikeout-model/static/js/main.4d8f14f2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5d769d7f.css",
+    "static/js/main.4d8f14f2.js"
+  ]
+}
